@@ -47,7 +47,17 @@ if left <= right:
 
 	###
 
+ def test_binary_search_found(self):
+        mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        key = 5
+        result = binary_search(mylist, key)
+        self.assertEqual(result, 4)  
 
+    def test_binary_search_not_found(self):
+        mylist = [1, 2, 3, 4, 6, 7, 8, 9]
+        key = 5
+        result = binary_search(mylist, key)
+        self.assertEqual(result, -1) 
 
 
 def time_search(search_fn, mylist, key):
